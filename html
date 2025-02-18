@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Average Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Average Calculator</h1>
+    <form id="stockForm">
+      <label for="boughtPrice">Price at which stock was bought:</label>
+      <input type="number" id="boughtPrice" step="0.01" required>
+
+      <label for="boughtShares">Number of shares bought:</label>
+      <input type="number" id="boughtShares" required>
+
+      <label for="currentPrice">Current market price:</label>
+      <input type="number" id="currentPrice" step="0.01" required>
+
+      <label for="newShares">Number of shares to buy now:</label>
+      <input type="number" id="newShares" required>
+
+      <button type="submit">Calculate Average</button>
+    </form>
+
+    <h2>Result:</h2>
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
