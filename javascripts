@@ -1,0 +1,25 @@
+// script.js
+document.getElementById('stockForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Get user inputs
+  const boughtPrice = parseFloat(document.getElementById('boughtPrice').value);
+  const boughtShares = parseFloat(document.getElementById('boughtShares').value);
+  const currentPrice = parseFloat(document.getElementById('currentPrice').value);
+  const newShares = parseFloat(document.getElementById('newShares').value);
+
+  // Calculate total cost of existing shares
+  const existingTotalCost = boughtPrice * boughtShares;
+
+  // Calculate total cost of new shares
+  const newTotalCost = currentPrice * newShares;
+
+  // Calculate total shares after buying new ones
+  const totalShares = boughtShares + newShares;
+
+  // Calculate average price
+  const averagePrice = (existingTotalCost + newTotalCost) / totalShares;
+
+  // Display the result
+  document.getElementById('result').innerText = `Average Price: Rupees ${averagePrice.toFixed(2)}`;
+});
