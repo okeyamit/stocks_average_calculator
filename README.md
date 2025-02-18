@@ -1,0 +1,1 @@
+# stocks_average_calculator
